@@ -98,7 +98,7 @@ if (randomNumber >= 0.5){
      alert('Greater than 0.5')
 }else{
      alert('Lower than 0.5')     
-}
+};
 /* b) Crear una variable “Age” que contenga un número entero entre 0 y 100 y muestre los siguientes mensajes de alerta:
       “Bebe” si la edad es menor a 2 años
       “Nino” si la edad es entre 2 y 12 años
@@ -122,10 +122,37 @@ if (age < 2){
      alert('Adulto Mayor')
 }else{
      alert('Anciano')
-}
+};
 
-
-
+/* 5. For
+a) Crear un array que contenga 5 palabras y recorrer dicho array utilizando un bucle for de JavaScript para mostrar una 
+alerta utilizando cada una de las palabras.*/
+subjects = ['math', 'science', 'history', 'biology', 'chemistry'];
+for (var i = 0; i <= subjects.length-1; i++){
+     alert(subjects[i]);
+};
+/* b) Al array anterior convertir la primera letra de cada palabra en mayúscula y mostrar una alerta por cada palabra 
+modificada.*/
+for (var i = 0; i <= subjects.length-1; i++){
+     subjects[i] = subjects[i][0].toUpperCase() + subjects[i].slice(1);
+     alert(subjects[i]);
+};
+/* c) Crear una variable llamada “sentence” que tenga un string vacío, luego al array del punto a) recorrerlo con un 
+bucle for para ir guardando cada palabra dentro de la variable sentence. Al final mostrar una única alerta con la 
+cadena completa.*/
+var sentence = "";
+for (var i = 0; i < subjects.length; i++){
+     sentence = sentence + subjects[i];
+};
+alert(sentence);
+/* d) Crear una array vacío y con un bucle for de 10 repeticiones llenar el array con el número de la repetición, es 
+decir que al final de la ejecución del bucle for deberia haber 10 elementos dentro del array, desde el número 0 hasta al
+numero 9. Mostrar por la consola del navegador el al array final (utilizar console.log).*/
+numberArray = new Array(10);
+for (var i = 0; i < numberArray.length; i++){
+     numberArray[i] = i;
+};
+console.log(numberArray);
 
 
 

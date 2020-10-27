@@ -79,7 +79,7 @@ console.log(months[4], months[10]);
 console.log(months.sort());
 
 //c) Agregar un elemento al principio y al final del array (utilizar unshift y push).
-months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 
+var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 
 'Noviembre', 'Diciembre'];
 months.unshift('Year 2020');
 months.push('End');
@@ -97,15 +97,15 @@ console.log(months.reverse());
 console.log(months.join('-'));
 
 //g) Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
-months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 
+var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 
 'Noviembre', 'Diciembre'];
-sliceMonths = months.slice(4,11);
+var sliceMonths = months.slice(4,11);
 console.log(sliceMonths);
 
 /* 4. If Else
 a) Crear un número aleatorio entre 0 y 1 utilizando la función Math.random(), si el valor es mayor o igual que 0,5 
    mostrar una alerta con el mensaje “Greater than 0,5” y sino un alerta con el mensaje “Lower than 0,5” */
-randomNumber = Math.random();
+var randomNumber = Math.random();
 console.log(randomNumber);
 if (randomNumber >= 0.5) {
   alert('Greater than 0.5')
@@ -142,7 +142,7 @@ if (age < 2) {
 
 a) Crear un array que contenga 5 palabras y recorrer dicho array utilizando un bucle for de JavaScript para mostrar una 
    alerta utilizando cada una de las palabras.*/
-subjects = ['math', 'science', 'history', 'biology', 'chemistry'];
+var subjects = ['math', 'science', 'history', 'biology', 'chemistry'];
 for (var i = 0; i <= subjects.length-1; i++) {
      alert(subjects[i]);
 };
@@ -158,7 +158,7 @@ for (var i = 0; i <= subjects.length-1; i++) {
       bucle for para ir guardando cada palabra dentro de la variable sentence. Al final mostrar una única alerta con la 
       cadena completa.*/
 var sentence = "";
-subjects = ['math', 'science', 'history', 'biology', 'chemistry'];
+var subjects = ['math', 'science', 'history', 'biology', 'chemistry'];
 for (var i = 0; i < subjects.length; i++) {
      sentence = sentence + subjects[i];
 };
@@ -167,7 +167,7 @@ alert(sentence);
 /* d) Crear una array vacío y con un bucle for de 10 repeticiones llenar el array con el número de la repetición, es 
       decir que al final de la ejecución del bucle for deberia haber 10 elementos dentro del array, desde el número 0 
       hasta al numero 9. Mostrar por la consola del navegador el al array final (utilizar console.log).*/
-numberArray = new Array(10);
+var numberArray = new Array(10);
 for (var i = 0; i < numberArray.length; i++) {
   numberArray[i] = i;
 };
@@ -185,7 +185,6 @@ console.log(resultItemA);
 
 /*b) A la función suma anterior, agregarle una validación para controlar si alguno de los parámetros no es un número, 
      mostrar una alerta aclarando que uno de los parámetros tiene error y retornar el valor NaN como resultado.*/
-
 function sumOfNumbers(numOneItemB, numTwoItemB) {
   if (typeof numOneItemB !== 'number' || typeof numTwoItemB !== 'number') {
     alert('One of the parameters is not a number');
@@ -231,6 +230,7 @@ function sumOfNumbers(numOneItemE, numTwoItemE) {
 function validateNumbers(numOneItemE, numTwoItemE) {
   if (typeof numOneItemE !== 'number' || typeof numTwoItemE !== 'number') {
     alert('One of the parameters is not a number');
+    console.log(NaN);
     return Number.NaN;
   } else { // If both are numbers, then return true
     return true;
